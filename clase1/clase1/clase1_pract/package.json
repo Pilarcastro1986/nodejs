@@ -1,0 +1,14 @@
+{
+  "name": "primerproyecto",
+  "version": "1.0.0",
+  "description": "primer proyecto en node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index1.js",
+    "test": "echo \"Hola!: no test specified\" && exit 1",
+    "hola": "dir",
+    "debug" : "node debug index1.js"
+  },
+  "author": "Pili",
+  "license": "ISC"
+}

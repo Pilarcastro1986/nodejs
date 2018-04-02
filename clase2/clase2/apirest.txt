@@ -1,0 +1,32 @@
+API REST ES ARMAR UN SERVIDOR QUE TIENE UN CONJUNTO DE ENDPOINT.
+UN ENDPOINT ES UNA URL + UN VERBO HTTP. 
+la url identifica un recurso.
+
+http => protocolo que funciona para transportar paginas html, pero en node transporta jsons.
+los verbos http son
+get *
+post *
+put *
+delete *
+patch
+options
+trace
+head
+ * importantes
+
+ GET 
+ operacion segura: es imposible que rompa algo.
+ e idenpotente : siempre me va a devolver el mismo resultado. (si siempre me devuele alumnos. A misma llamada, misma respuesta.)
+
+ Put - actualizar 
+ Operacion idenpotente
+
+ DELETE
+ Operacion idenpotente
+
+ POST - crear 
+
+ PATCH - actualizar una parte, cuando quiero hacer un put de un dato del alumno, solo alctualizo ese dato y no todo.
+ 
+ GET
+ 8080/api/v1/alumnos para que sea un endpoint le tengo que agregar un verbo.
