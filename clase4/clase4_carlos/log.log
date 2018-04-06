@@ -1,0 +1,144 @@
+2018-04-03T23:56:16.538Z - error: uncaughtException: Cannot find module './app/createExpressApp.js' date=Tue Apr 03 2018 20:56:16 GMT-0300 (Hora estándar de Argentina), pid=7304, uid=null, gid=null, cwd=C:\Users\EducaciónIT\Desktop\clase4, execPath=C:\Program Files\nodejs\node.exe, version=v9.3.0, argv=[C:\Program Files\nodejs\node.exe, C:\Users\EducaciónIT\Desktop\clase4\server.js], rss=26468352, heapTotal=10829824, heapUsed=6811600, external=137057, loadavg=[0, 0, 0], uptime=6247.5482323
+Error: Cannot find module './app/createExpressApp.js'
+    at Function.Module._resolveFilename (module.js:555:15)
+    at Function.Module._load (module.js:482:25)
+    at Module.require (module.js:604:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (C:\Users\EducaciónIT\Desktop\clase4\server.js:7:26)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+2018-04-03T23:57:00.567Z - error: uncaughtException: Cannot find module 'express' date=Tue Apr 03 2018 20:57:00 GMT-0300 (Hora estándar de Argentina), pid=9612, uid=null, gid=null, cwd=C:\Users\EducaciónIT\Desktop\clase4, execPath=C:\Program Files\nodejs\node.exe, version=v9.3.0, argv=[C:\Program Files\nodejs\node.exe, C:\Users\EducaciónIT\Desktop\clase4\server.js], rss=26558464, heapTotal=10829824, heapUsed=6792536, external=137057, loadavg=[0, 0, 0], uptime=6291.5776857
+Error: Cannot find module 'express'
+    at Function.Module._resolveFilename (module.js:555:15)
+    at Function.Module._load (module.js:482:25)
+    at Module.require (module.js:604:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (C:\Users\EducaciónIT\Desktop\clase4\app\createExpressApp.js:1:79)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+2018-04-03T23:59:02.195Z - error: uncaughtException: Cannot find module './api/createApiRouter.js' date=Tue Apr 03 2018 20:59:02 GMT-0300 (Hora estándar de Argentina), pid=8536, uid=null, gid=null, cwd=C:\Users\EducaciónIT\Desktop\clase4, execPath=C:\Program Files\nodejs\node.exe, version=v9.3.0, argv=[C:\Program Files\nodejs\node.exe, C:\Users\EducaciónIT\Desktop\clase4\server.js], rss=36925440, heapTotal=20873216, heapUsed=12930552, external=588358, loadavg=[0, 0, 0], uptime=6413.2212277
+Error: Cannot find module './api/createApiRouter.js'
+    at Function.Module._resolveFilename (module.js:555:15)
+    at Function.Module._load (module.js:482:25)
+    at Module.require (module.js:604:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (C:\Users\EducaciónIT\Desktop\clase4\app\createExpressApp.js:4:19)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+2018-04-03T23:59:26.913Z - info: Listening on port 8080
+2018-04-04T00:00:04.185Z - info: 404 GET / 7ms
+2018-04-04T00:00:04.368Z - info: 404 GET /favicon.ico 1ms
+2018-04-04T00:06:00.647Z - info: Listening on port 8080
+2018-04-04T00:06:13.221Z - info: 404 GET /api/vi/alumnos 6ms
+2018-04-04T00:06:21.872Z - info: 200 GET /api/v1/alumnos 3ms
+2018-04-04T00:07:29.878Z - info: Listening on port 8080
+2018-04-04T00:07:33.881Z - info: 304 GET /api/v1/alumnos 6ms
+2018-04-04T00:07:33.903Z - error: error error
+2018-04-04T00:21:41.955Z - info: Listening on port 8080
+2018-04-04T00:21:45.162Z - info: 200 GET /api/v1/alumnos 5ms
+2018-04-04T00:23:42.036Z - info: Listening on port 8080
+2018-04-04T00:23:45.894Z - info: mi mensaje
+2018-04-04T00:23:45.910Z - info: 304 GET /api/v1/alumnos 12ms
+2018-04-04T00:49:05.866Z - info: Listening on port 8080
+2018-04-04T00:49:08.084Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
+2018-04-04T00:49:33.067Z - error: TypeError: Cannot read property 'find' of undefined
+    at module.exports.express.Router.get (C:\Users\EducaciónIT\Desktop\clase4\app\api\v1\alumnos\listarAlumnos.js:6:45)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:174:3) TypeError: Cannot read property 'find' of undefined
+    at module.exports.express.Router.get (C:\Users\EducaciónIT\Desktop\clase4\app\api\v1\alumnos\listarAlumnos.js:6:45)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\EducaciónIT\Desktop\clase4\node_modules\express\lib\router\index.js:174:3)
+2018-04-04T00:49:33.100Z - info: 500 GET /api/v1/alumnos 21ms
+2018-04-04T00:50:09.065Z - info: Listening on port 8080
+2018-04-04T00:50:09.987Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
+2018-04-04T00:50:21.465Z - info: 200 GET /api/v1/alumnos 206ms
+2018-04-04T00:56:52.221Z - info: Listening on port 8080
+2018-04-04T00:56:53.549Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
+2018-04-04T00:57:08.281Z - info: 200 GET / 14ms
+2018-04-04T00:58:15.877Z - info: 200 GET / 3ms
+2018-04-04T00:58:33.122Z - info: 404 POST /api/v1/alumnos 28ms
+2018-04-04T00:58:43.818Z - info: Listening on port 8080
+2018-04-04T00:58:45.130Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
+2018-04-04T00:58:48.194Z - info: 404 POST /api/v1/alumnos 26ms
+2018-04-04T00:58:55.704Z - info: 304 GET /api/v1/alumnos 197ms
+2018-04-04T00:59:36.659Z - info: Listening on port 8080
+2018-04-04T00:59:37.563Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
+2018-04-04T00:59:46.003Z - info: 201 POST /api/v1/alumnos 637ms
+2018-04-04T00:59:52.382Z - info: 200 GET /api/v1/alumnos 179ms
+2018-04-05T16:37:22.784Z - error: uncaughtException: Unexpected token ( date=Thu Apr 05 2018 13:37:22 GMT-0300 (-03), pid=91618, uid=502, gid=20, cwd=/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos, execPath=/usr/local/bin/node, version=v6.10.2, argv=[/usr/local/bin/node, /Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/server.js], rss=55664640, heapTotal=37883904, heapUsed=21788752, external=17842900, loadavg=[2.6396484375, 2.8837890625, 2.72412109375], uptime=7534775
+/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/v1/alumnos/agregarAlumno.js:4
+.post('/v1/alumnos', async (req, res, next) => {
+                           ^
+SyntaxError: Unexpected token (
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at Module._compile (module.js:542:28)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+    at Function.Module._load (module.js:438:3)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at glob.sync.map.filename (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/createApiRouter.js:5:18)
+    at Array.map (native)
+    at module.exports (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/createApiRouter.js:5:2)
+    at Object.<anonymous> (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/createExpressApp.js:4:54)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+2018-04-05T16:39:51.497Z - error: uncaughtException: Unexpected token ( date=Thu Apr 05 2018 13:39:51 GMT-0300 (-03), pid=91659, uid=502, gid=20, cwd=/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos, execPath=/usr/local/bin/node, version=v6.10.2, argv=[/usr/local/bin/node, /Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/server.js], rss=56074240, heapTotal=37883904, heapUsed=21820344, external=17842900, loadavg=[2.1884765625, 2.61181640625, 2.63525390625], uptime=7534924
+/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/v1/alumnos/agregarAlumno.js:4
+.post('/v1/alumnos', async (req, res, next) => {
+                           ^
+SyntaxError: Unexpected token (
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at Module._compile (module.js:542:28)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+    at Function.Module._load (module.js:438:3)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at glob.sync.map.filename (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/createApiRouter.js:5:18)
+    at Array.map (native)
+    at module.exports (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/api/createApiRouter.js:5:2)
+    at Object.<anonymous> (/Users/pilarcastro/Desktop/Pili/Cursos/Node/clase4/clase4_carlos/app/createExpressApp.js:4:54)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
