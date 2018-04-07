@@ -1,17 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express.Router();
 const ctrlProducts = require('./controller/controllerProducts');
 
-
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
-app.use((req, res, next) => {
+const app = express()
+.use(bodyParser.urlencoded({extended: true}))
+.use(bodyParser.json())
+.use((req, res, next) => {
+    debugger
     req.educacionit = "Carlos"
     return next()
 })
-app.get('api/v1/productos' , ctrlProducts.getProducts);
-app.post('api/v1/productos' , ctrlProducts.postProducts);
+.get('api/v1/productos' , ctrlProducts.getProducts)
+.post('api/v1/productos' , ctrlProducts.postProducts)
 
 
 module.exports = app;
