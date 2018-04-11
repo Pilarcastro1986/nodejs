@@ -13,7 +13,7 @@ function getBooks(req, res){
 
 function postBooks(req, res) {
     console.log(req.body);
-
+    console.log('id:' , req.query)
     let books = new Books()
     books.titulo = req.body.titulo
     books.autor = req.body.autor
@@ -28,8 +28,16 @@ function postBooks(req, res) {
  
 
 function deleteBook(req, res){
-    let booktst = req.params.id
-    console.log( 'idbook' ,booktst)
+    let id = req.params.id
+    console.log( 'idbook' ,id)
+
+        books.findById(id, (err, books) => {
+            if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
+            books.remove(err => {
+            if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
+            res.status(200).send({mensaje : 'producto eliminado'})
+        })
+    })
 }
 
 module.exports = {getBooks , postBooks, deleteBook}
