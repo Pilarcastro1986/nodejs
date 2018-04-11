@@ -1,7 +1,7 @@
 const http = require('http')
 const port = process.env.PORT || 3002
 const app = require('./app.js')
-const config  = { db: process.env.MONGODB || 'mongodb://localhost:27017/shop'}
+const config  = { db: process.env.MONGODB || 'mongodb://localhost:27017/books'}
 const mongoose = require('mongoose')
 
 mongoose.connection.openUri(config.db, (err, res) => {

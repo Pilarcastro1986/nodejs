@@ -1,14 +1,30 @@
 const Books = require('./model')
+// .get('/v1/alumnos', async (req, res, next) => {
+//     try {
+//         const alumnos = await req.db.Alumno.find()
+//         res.send(alumnos)
+//     } catch (error) {
+//         next(error)
+//     }
+// })
 
 
-
-function getBooks(req, res){
-    Books.find({}, (err,books) =>{
-       if(err) return res.status(500).send({mensaje : 'error al buscar el producto'})
-       if(!books) return res.status(404).send({mensaje: 'el producto no existe'})
-       res.send(200, ({books}))
-       })
+async function getBooks (req, res, next){
+    try{
+        console.log(Object.keys('sss' , req.db[0]))
+        const books = await Books.find()
+        res.send(books)
     }
+    catch (error){
+        next(error)
+    }
+}
+    // Books.find({}, (err,books) =>{
+    //    if(err) return res.status(500).send({mensaje : 'error al buscar el producto'})
+    //    if(!books) return res.status(404).send({mensaje: 'el producto no existe'})
+    //    res.send(200, ({books}))
+    //    })
+    // }
     
 
 function postBooks(req, res) {
@@ -28,16 +44,16 @@ function postBooks(req, res) {
  
 
 function deleteBook(req, res){
-    let id = req.params.id
-    console.log( 'idbook' ,id)
+    // let id = req.params.id
+    // console.log( 'idbook' ,id)
 
-        books.findById(id, (err, books) => {
-            if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
-            books.remove(err => {
-            if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
-            res.status(200).send({mensaje : 'producto eliminado'})
-        })
-    })
+    //     books.findById(id, (err, books) => {
+    //         if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
+    //         books.remove(err => {
+    //         if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
+    //         res.status(200).send({mensaje : 'producto eliminado'})
+    //     })
+    // })
 }
 
 module.exports = {getBooks , postBooks, deleteBook}
