@@ -28,7 +28,7 @@ async function getBook (req, res, next){
 async function deleteBook (req, res, next){
     console.log('req', req.params)
     try{
-        const id git 
+        const id = await Books.findById(req.params.id)
         id.remove(id)
         return res.status(200).send('producto eliminado')
     }

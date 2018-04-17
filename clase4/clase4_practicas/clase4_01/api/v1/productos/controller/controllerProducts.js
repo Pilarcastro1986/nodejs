@@ -9,6 +9,6 @@ function getProducts(req, res){
 
 
 // ============================================== POST =======================================================
-function postProduct(req, res, next){}
+function postProducts(req, res, next){}
 
-module.exports = { getProducts , postProduct}
+module.exports = { getProducts , postProducts}

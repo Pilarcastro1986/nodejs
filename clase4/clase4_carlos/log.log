@@ -142,3 +142,5 @@ SyntaxError: Unexpected token (
     at Module._compile (module.js:570:32)
     at Object.Module._extensions..js (module.js:579:10)
     at Module.load (module.js:487:32)
+2018-04-10T13:47:40.264Z - info: Listening on port 8080
+2018-04-10T13:47:41.836Z - info: MongoDB connected at mongodb://ds231739.mlab.com:31739/educacionit
