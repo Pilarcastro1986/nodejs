@@ -10,8 +10,10 @@ const app = express()
 
 .use(express.static('./public'))
 .get('/api/v1/libros', ctrl.getBooks)
-.post('/api/v1/libros' , ctrl.postBooks)
+.get('/api/v1/:id', ctrl.getBook)
 .delete('/api/v1/:id' , ctrl.deleteBook)
+.post('/api/v1/libros' , ctrl.postBooks)
+
 .use((error, req, res, next) => {
     res.status(error.status || 500).send('Se produjo un error')
 })

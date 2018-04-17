@@ -1,59 +1,63 @@
 const Books = require('./model')
-// .get('/v1/alumnos', async (req, res, next) => {
-//     try {
-//         const alumnos = await req.db.Alumno.find()
-//         res.send(alumnos)
-//     } catch (error) {
-//         next(error)
-//     }
-// })
 
-
+    
 async function getBooks (req, res, next){
-    try{
-        console.log(Object.keys('sss' , req.db[0]))
-        const books = await Books.find()
-        res.send(books)
+        try{
+            const books = await Books.find()
+            res.send(books)
+            console.log(books)
+        }
+        catch (error){
+            console.log(error);
+        }
     }
-    catch (error){
-        next(error)
-    }
-}
-    // Books.find({}, (err,books) =>{
-    //    if(err) return res.status(500).send({mensaje : 'error al buscar el producto'})
-    //    if(!books) return res.status(404).send({mensaje: 'el producto no existe'})
-    //    res.send(200, ({books}))
-    //    })
-    // }
     
 
-function postBooks(req, res) {
-    console.log(req.body);
-    console.log('id:' , req.query)
-    let books = new Books()
-    books.titulo = req.body.titulo
-    books.autor = req.body.autor
-    books.anio = req.body.anio
-
-
-    books.save((err, bookStored) => {
-        if (err) return res.status(500).send({ mensaje: 'NO SE PUEDE CONECTAR A LA BD' })
-        return res.status(200).send({ mensaje: bookStored })
-    })
-}
- 
-
-function deleteBook(req, res){
-    // let id = req.params.id
-    // console.log( 'idbook' ,id)
-
-    //     books.findById(id, (err, books) => {
-    //         if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
-    //         books.remove(err => {
-    //         if(err) return res.status(500).send({ mensaje : 'no se puedo eliminar producto'})
-    //         res.status(200).send({mensaje : 'producto eliminado'})
-    //     })
-    // })
+async function getBook (req, res, next){
+    console.log('req', req.params)
+    try{
+        const id = await Books.findById(req.params.id)
+        res.send(id)
+        console.log('error', id);
+    }
+    catch (error){
+        console.log(error);
+    }
 }
 
-module.exports = {getBooks , postBooks, deleteBook}
+async function deleteBook (req, res, next){
+    console.log('req', req.params)
+    try{
+        const id = await Books.findById(req.params.id)
+        id.remove(id)
+        return res.status(200).send('producto eliminado')
+    }
+    catch (error){
+        console.log(error);
+    }
+}
+
+    async function postBooks (req, res, next){
+         try {
+            const nuevo =  new Books();
+            nuevo.titulo = req.body.titulo
+            nuevo.autor = req.body.autor
+            nuevo.anio = req.body.anio
+
+            await nuevo.save()
+            res.status(201).send(nuevo)
+
+         }   
+        catch(error) {
+            next(error)
+        }
+    }
+
+
+module.exports = {
+    getBooks,
+    getBook,
+    deleteBook,
+    postBooks
+}
+
